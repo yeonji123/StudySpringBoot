@@ -21,8 +21,8 @@ public interface MemoRepository extends JpaRepository<Memo, Long>{
     // ?1, ?2, :xxx, .#{} 을 사용해서 쿼리에 where문 대신 사용가능
     @Transactional
     @Modifying
-//    @Query("update Memo m set m.memoText = :memoText where m.mno = :mno ")
-    @Query("update Memo m set m.memoText = :#{#param.memoText} where m.mno = :#{#param.mno}")
+    @Query("update Memo m set m.memoText = :memoText where m.mno = :mno ")
+//    @Query("update Memo m set m.memoText = :#{#param.memoText} where m.mno = :#{#param.mno}")
     int updateMemoText(@Param("mno") Long mno, @Param("memoText") String memoText);
 
     @Query(value= "select m from Memo m where m.mno > :mno", countQuery = "select count(m) from Memo m where m.mno >:mno")
