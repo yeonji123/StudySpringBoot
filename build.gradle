@@ -37,9 +37,10 @@ dependencies {
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
     annotationProcessor 'org.projectlombok:lombok'
     providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
-    implementation group: 'org.mariadb.jdbc', name: 'mariadb-java-client', version: '3.1.4'
 
-
+    // Database
+    implementation 'mysql:mysql-connector-java:8.0.33'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 
 }
 
