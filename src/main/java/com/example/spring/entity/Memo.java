@@ -2,6 +2,8 @@ package com.example.spring.entity;
 
 import lombok.*;
 import jakarta.persistence.*;
+
+
 @Entity
 // @Entity : Spring Data JPA는 반드시 어노테이션을 추가해야만 한다
 @Table(name="tb1_memo")
