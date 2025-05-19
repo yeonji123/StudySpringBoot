@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @Controller
-@RequestMapping("/sample")
 @Log4j2
 public class SampleController {
     @GetMapping("/hello")
@@ -16,7 +15,7 @@ public class SampleController {
         return new String[]{"Hello","World"};
     }
 
-    @GetMapping("/ex1")
+    @GetMapping("/sample/ex1")
     public void ex1(){
         log.info("ex1.........");
     }
