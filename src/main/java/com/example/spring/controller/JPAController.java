@@ -1,5 +1,6 @@
 package com.example.spring.controller;
 
+import com.example.spring.service.MemberService;
 import lombok.AllArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.web.bind.annotation.*;
@@ -10,6 +11,9 @@ import org.springframework.web.bind.annotation.*;
 @Log4j2
 @RequestMapping("/users")
 public class JPAController {
+
+    // Service
+    private final MemberService memberService;
 
     // 사용자 정보 get
     @GetMapping("/")
